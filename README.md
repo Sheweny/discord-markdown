@@ -2,11 +2,45 @@
 
 This module provides utilities functions for manipulate markdown with discord.
 
-## MarkdownUtil
+## Getting started
 
----
+### Installation
 
-## [static] bold(text)
+With npm :
+
+```shell-session
+npm install discord-markdown.js
+```
+
+With yarn :
+
+```shell-session
+yarn add discord-markdown.js
+```
+
+### Import module
+
+CommonJS syntax :
+
+```js
+const {
+  MarkdownBuild,
+  MarkdownParser,
+  MarkdownEscaper,
+} = require("discord-markdown.js");
+```
+
+Module ES syntax :
+
+```js
+import {
+  MarkdownBuild,
+  MarkdownParser,
+  MarkdownEscaper,
+} from "discord-markdown.js";
+```
+
+## [static] MarkdownBuild#bold(text)
 
 Return text formatted with bold
 
@@ -19,10 +53,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.bold("Hello world"));
+console.log(MarkdownBuild.bold("Hello world"));
 ```
 
-## [static] italic(text)
+## [static] MarkdownBuild#italic(text)
 
 Return text formatted with italic
 
@@ -35,10 +69,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.italic("Hello world"));
+console.log(MarkdownBuild.italic("Hello world"));
 ```
 
-## [static] underline(text)
+## [static] MarkdownBuild#underline(text)
 
 Return text formatted with underline
 
@@ -51,10 +85,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.underline("Hello world"));
+console.log(MarkdownBuild.underline("Hello world"));
 ```
 
-## [static] strikethrough(text)
+## [static] MarkdownBuild#strikethrough(text)
 
 Return text formatted with strikethrough
 
@@ -67,10 +101,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.strikethrough("Hello world"));
+console.log(MarkdownBuild.strikethrough("Hello world"));
 ```
 
-## [static] code(text)
+## [static] MarkdownBuild#code(text)
 
 Return text formatted with code
 
@@ -83,10 +117,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.code("Hello world"));
+console.log(MarkdownBuild.code("Hello world"));
 ```
 
-## [static] codeBlock(text)
+## [static] MarkdownBuild#codeBlock(text)
 
 Return text formatted with codeBlock
 
@@ -99,10 +133,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.codeBlock("Hello world"));
+console.log(MarkdownBuild.codeBlock("Hello world"));
 ```
 
-## [static] quote(text)
+## [static] MarkdownBuild#quote(text)
 
 Return text formatted with quote
 
@@ -115,10 +149,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.quote("Hello world"));
+console.log(MarkdownBuild.quote("Hello world"));
 ```
 
-## [static] quoteBlock(text)
+## [static] MarkdownBuild#quoteBlock(text)
 
 Return text formatted with quoteBlock
 
@@ -131,10 +165,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.quoteBlock("Hello world"));
+console.log(MarkdownBuild.quoteBlock("Hello world"));
 ```
 
-## [static] spoiler(text)
+## [static] MarkdownBuild#spoiler(text)
 
 Return text formatted with codeBlock
 
@@ -147,14 +181,10 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownUtil.codeBlock("Hello world"));
+console.log(MarkdownBuild.codeBlock("Hello world"));
 ```
 
-## MarkdownEscaper
-
----
-
-## [static] escapeBold(text)
+## [static] MarkdownEscaper#bold(text)
 
 Return text with bold escaped.
 
@@ -167,10 +197,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeBold("Hello world"));
+console.log(MarkdownEscaper.bold("Hello world"));
 ```
 
-## [static] escapeItalic(text)
+## [static] MarkdownEscaper#italic(text)
 
 Return text with italic escaped.
 
@@ -183,10 +213,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeItalic("Hello world"));
+console.log(MarkdownEscaper.italic("Hello world"));
 ```
 
-## [static] escapeUnderline(text)
+## [static] MarkdownEscaper#underline(text)
 
 Return text with underline escaped.
 
@@ -199,10 +229,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeUnderline("Hello world"));
+console.log(MarkdownEscaper.underline("Hello world"));
 ```
 
-## [static] escapeSpoiler(text)
+## [static] MarkdownEscaper#spoiler(text)
 
 Return text with spoiler escaped.
 
@@ -215,10 +245,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeSpoiler("Hello world"));
+console.log(MarkdownEscaper.spoiler("Hello world"));
 ```
 
-## [static] escapeCodeBlock(text)
+## [static] MarkdownEscaper#codeBlock(text)
 
 Return text with code block escaped.
 
@@ -231,10 +261,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeCodeBlock("Hello world"));
+console.log(MarkdownEscaper.codeBlock("Hello world"));
 ```
 
-## [static] escapeInlineCode(text)
+## [static] MarkdownEscaper#inlineCode(text)
 
 Return text with inline code escaped.
 
@@ -247,10 +277,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeInlineCode("Hello world"));
+console.log(MarkdownEscaper.inlineCode("Hello world"));
 ```
 
-## [static] escapeStrikethrough(text)
+## [static] MarkdownEscaper#strikethrough(text)
 
 Return text with bold escaped.
 
@@ -263,14 +293,10 @@ Return :
 The text escaped (string)
 
 ```js
-console.log(MarkdownEscaper.escapeStrikethrough("Hello world"));
+console.log(MarkdownEscaper.strikethrough("Hello world"));
 ```
 
-## MarkdownParser
-
----
-
-## [static] parseEmoji(text)
+## [static] MarkdownParser#emoji(text)
 
 Return id of emojis.
 
@@ -283,10 +309,10 @@ Return :
 An object with name and if of emoji and if is animated
 
 ```js
-console.log(MarkdownParser.parseEmoji("Hello world <a:name:0000>"));
+console.log(MarkdownParser.emoji("Hello world <a:name:0000>"));
 ```
 
-## [static] parseChannel(text)
+## [static] MarkdownParser#channel(text)
 
 Return id of channels.
 
@@ -299,10 +325,10 @@ Return :
 An array of id of channels (Array\<string>)
 
 ```js
-console.log(MarkdownParser.parseChannel("Hello world <#0000000>"));
+console.log(MarkdownParser.channel("Hello world <#0000000>"));
 ```
 
-## [static] parseRole(text)
+## [static] MarkdownParser#role(text)
 
 Return id of roles.
 
@@ -315,10 +341,10 @@ Return :
 An array of id of roles (Array\<string>)
 
 ```js
-console.log(MarkdownParser.parseRole("Hello world <@&000000>"));
+console.log(MarkdownParser.role("Hello world <@&000000>"));
 ```
 
-## [static] parseGuildEmoji(text)
+## [static] MarkdownParser#guildEmoji(text)
 
 Return id of emojis.
 
@@ -331,10 +357,10 @@ Return :
 An array of id of emojis (Array\<string>)
 
 ```js
-console.log(MarkdownParser.parseGuildEmoji("Hello world <a:name:0000>"));
+console.log(MarkdownParser.guildEmoji("Hello world <a:name:0000>"));
 ```
 
-## [static] parseUser(text)
+## [static] MarkdownParser#user(text)
 
 Return id of users.
 
@@ -347,10 +373,10 @@ Return :
 An array of id of users (Array\<string>)
 
 ```js
-console.log(MarkdownParser.parseUser("Hello world <@0000000>"));
+console.log(MarkdownParser.user("Hello world <@0000000>"));
 ```
 
-## [static] parseUserNickname(text)
+## [static] MarkdownParser#userNickname(text)
 
 Return id of users.
 
@@ -363,5 +389,5 @@ Return :
 An array of id of users (Array\<string>)
 
 ```js
-console.log(MarkdownParser.parseUser("Hello world <@0000000>"));
+console.log(MarkdownParser.user("Hello world <@0000000>"));
 ```

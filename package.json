@@ -1,5 +1,5 @@
 {
-  "name": "discord-markdown",
+  "name": "discord-markdown.js",
   "version": "1.0.0",
   "description": "A module for manage and parse markdown syntax of discord.",
   "main": "lib/index.js",

@@ -1,4 +1,3 @@
-
 /**
  * Markdown-discord
  * github.com/Smaug6739/discord-markdown

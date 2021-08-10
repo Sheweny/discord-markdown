@@ -1,13 +1,13 @@
 class MarkdownEscaper {
 
-	static escapeBold(text: string) {
+	static bold(text: string) {
 		let i = 0;
 		return text.replace(/\*\*(\*)?/g, (_, match) => {
 			if (match) return ++i % 2 ? `${match}\\*\\*` : `\\*\\*${match}`;
 			return '\\*\\*';
 		});
 	}
-	static escapeItalic(text: string) {
+	static italic(text: string) {
 		let i = 0;
 		text = text.replace(/(?<=^|[^*])\*([^*]|\*\*|$)/g, (_, match) => {
 			if (match === '**') return ++i % 2 ? `\\*${match}` : `${match}\\*`;
@@ -19,7 +19,7 @@ class MarkdownEscaper {
 			return `\\_${match}`;
 		});
 	}
-	static escapeUnderline(text: string) {
+	static underline(text: string) {
 		let i = 0;
 		return text.replace(/__(_)?/g, (_, match) => {
 			if (match) return ++i % 2 ? `${match}\\_\\_` : `\\_\\_${match}`;
@@ -27,16 +27,16 @@ class MarkdownEscaper {
 		});
 	}
 
-	static escapeSpoiler(text: string) {
+	static spoiler(text: string) {
 		return text.replace(/\|\|/g, '\\|\\|');
 	}
-	static escapeCodeBlock(text: string) {
+	static codeBlock(text: string) {
 		return text.replace(/```/g, '\\`\\`\\`');
 	}
-	static escapeInlineCode(text: string) {
+	static inlineCode(text: string) {
 		return text.replace(/(?<=^|[^`])`(?=[^`]|$)/g, '\\`');
 	}
-	static escapeStrikethrough(text: string) {
+	static strikethrough(text: string) {
 		return text.replace(/~~/g, '\\~\\~');
 	}
 }

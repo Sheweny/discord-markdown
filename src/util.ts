@@ -1,5 +1,5 @@
 
-class MarkdownUtil {
+class MarkdownBuild {
 
 	static bold(str: string) {
 		return `**${str}**`;
@@ -30,4 +30,4 @@ class MarkdownUtil {
 	}
 }
 
-export { MarkdownUtil };
+export { MarkdownBuild };
