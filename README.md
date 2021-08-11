@@ -9,13 +9,13 @@ This module provides utilities functions for manipulate markdown with discord.
 With npm :
 
 ```shell-session
-npm install discord-markdown.js
+npm install @discord-util/markdown
 ```
 
 With yarn :
 
 ```shell-session
-yarn add discord-markdown.js
+yarn add @discord-util/markdown
 ```
 
 ### Import module
@@ -27,7 +27,7 @@ const {
   MarkdownBuild,
   MarkdownParser,
   MarkdownEscaper,
-} = require("discord-markdown.js");
+} = require("@discord-util/markdown");
 ```
 
 Module ES syntax :
@@ -37,7 +37,7 @@ import {
   MarkdownBuild,
   MarkdownParser,
   MarkdownEscaper,
-} from "discord-markdown.js";
+} from "@discord-util/markdown";
 ```
 
 ## [static] MarkdownBuild#bold(text)
