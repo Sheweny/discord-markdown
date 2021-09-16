@@ -120,7 +120,7 @@ The text formatted (string)
 console.log(MarkdownBuild.code("Hello world"));
 ```
 
-## [static] MarkdownBuild#codeBlock(text)
+## [static] MarkdownBuild#codeBlock(text, lang)
 
 Return text formatted with codeBlock
 
