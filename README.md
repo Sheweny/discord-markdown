@@ -128,12 +128,14 @@ Params :
 
 - text : The text to formatted (string)
 
+- lang : The language/syntax namz, default: "" 
+
 Return :
 
 The text formatted (string)
 
 ```js
-console.log(MarkdownBuild.codeBlock("console.log('Hello worl')"));
+console.log(MarkdownBuild.codeBlock("console.log('Hello world')", "js");
 ```
 
 ## [static] MarkdownBuild#quote(text)
