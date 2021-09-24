@@ -183,7 +183,7 @@ Return :
 The text formatted (string)
 
 ```js
-console.log(MarkdownBuild.codeBlock("Hello world"));
+console.log(MarkdownBuild.spoiler("Hello world"));
 ```
 
 ## [static] MarkdownEscaper#bold(text)
